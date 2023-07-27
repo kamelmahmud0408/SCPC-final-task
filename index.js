@@ -73,7 +73,6 @@ const result4 = findTwoNumbers(sortedArray, targetValue)
 console.log(result4)
 
 // task-6
-
 const generateRandomPassword = (length) => {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
     let password = '';
@@ -116,8 +115,23 @@ const romanToInteger = (romanNumber) => {
     return result;
 }
 
-const inputNum= "IX";
-const result6= romanToInteger(inputNum)
+const inputNum = "IX";
+const result6 = romanToInteger(inputNum)
 console.log(result6)
+
+// task-8
+const findSecondSmallest = (array) => {
+    if (array.length < 2) {
+        return "Array must contain at least two elements.";
+    }
+
+    const sortedArr = array.sort((a, b) => a - b);
+    return sortedArr[1];
+};
+
+const array = [5, 2, 8, 3, 1, 9];
+const result7= findSecondSmallest(array)
+console.log(result7);
+
 
 
