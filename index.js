@@ -24,5 +24,28 @@ const allPositiveNumbers=(numbers)=>{
 }
 
 const numbersArr=[2, -5, 10, -3, 7];
-const result= allPositiveNumbers(numbersArr)
-console.log(result)
+const result2= allPositiveNumbers(numbersArr)
+console.log(result2)
+
+// task-3
+const mostFrequentElement = (array) => {
+    if (array.length === 0) return null;
+  
+    const frequencyMap = {};
+    let maxFrequency = 0;
+    let mostFrequentElement;
+  
+    for (const element of array) {
+      frequencyMap[element] = (frequencyMap[element] || 0) + 1;
+      if (frequencyMap[element] > maxFrequency) {
+        maxFrequency = frequencyMap[element];
+        mostFrequentElement = element;
+      }
+    }
+  
+    return mostFrequentElement;
+  };
+  
+  const numbersArray= [3, 5, 2, 5, 3, 3, 1, 4, 5];
+  const result3 = mostFrequentElement(numbersArray)
+  console.log(result3)
