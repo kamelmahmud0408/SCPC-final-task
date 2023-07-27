@@ -72,6 +72,23 @@ const targetValue= 9;
 const result4= findTwoNumbers(sortedArray,targetValue)
 console.log(result4)
 
+// task-6
+
+const generateRandomPassword= (length)=>{
+    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+    let password = '';
+
+    for(let i=0; i < length; i++){
+        const randomIndex= Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+    }
+   return password;
+}
+
+const passwordLenght=15;
+const result5= generateRandomPassword(passwordLenght);
+console.log(result5)
+
 
 
   
