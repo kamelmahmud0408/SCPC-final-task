@@ -12,6 +12,7 @@ const inputStr = "hello world";
 const reversedString = reversString(inputStr);
 console.log(reversedString)
 
+
 // task-2
 const allPositiveNumbers = (numbers) => {
     let sum = 0;
@@ -26,6 +27,7 @@ const allPositiveNumbers = (numbers) => {
 const numbersArr = [2, -5, 10, -3, 7];
 const result2 = allPositiveNumbers(numbersArr)
 console.log(result2)
+
 
 // task-3
 const mostFrequentElement = (array) => {
@@ -50,6 +52,7 @@ const numbersArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const result3 = mostFrequentElement(numbersArray)
 console.log(result3)
 
+
 // task-4
 const findTwoNumbers = (sortedArr, targetValue) => {
     const n = sortedArr.length;
@@ -72,6 +75,7 @@ const targetValue = 9;
 const result4 = findTwoNumbers(sortedArray, targetValue)
 console.log(result4)
 
+
 // task-6
 const generateRandomPassword = (length) => {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
@@ -87,6 +91,7 @@ const generateRandomPassword = (length) => {
 const passwordLenght = 15;
 const result5 = generateRandomPassword(passwordLenght);
 console.log(result5)
+
 
 // task-7
 const romanToInteger = (romanNumber) => {
@@ -118,6 +123,7 @@ const romanToInteger = (romanNumber) => {
 const inputNum = "IX";
 const result6 = romanToInteger(inputNum)
 console.log(result6)
+
 
 // task-8
 const findSecondSmallest = (array) => {
