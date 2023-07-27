@@ -54,7 +54,7 @@ console.log(result3)
 const findTwoNumbers = (sortedArr, targetValue) => {
     const n = sortedArr.length;
 
-    for(let left = 0, right = n - 1; left < right;) {
+    for (let left = 0, right = n - 1; left < right;) {
         const sum = sortedArr[left] + sortedArr[right];
         if (sum === targetValue) {
             return [left, right];
@@ -67,28 +67,57 @@ const findTwoNumbers = (sortedArr, targetValue) => {
     return null;
 }
 
-const sortedArray= [1, 3, 6, 8, 11, 15];
-const targetValue= 9;
-const result4= findTwoNumbers(sortedArray,targetValue)
+const sortedArray = [1, 3, 6, 8, 11, 15];
+const targetValue = 9;
+const result4 = findTwoNumbers(sortedArray, targetValue)
 console.log(result4)
 
 // task-6
 
-const generateRandomPassword= (length)=>{
+const generateRandomPassword = (length) => {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
     let password = '';
 
-    for(let i=0; i < length; i++){
-        const randomIndex= Math.floor(Math.random() * charset.length);
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
         password += charset[randomIndex];
     }
-   return password;
+    return password;
 }
 
-const passwordLenght=15;
-const result5= generateRandomPassword(passwordLenght);
+const passwordLenght = 15;
+const result5 = generateRandomPassword(passwordLenght);
 console.log(result5)
 
+// task-7
+const romanToInteger = (romanNumber) => {
+    const romanNumberMap = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000,
+    };
+
+    let result = 0;
+    for (let i = 0; i < romanNumber.length; i++) {
+        const currentValue = romanNumberMap[romanNumber[i]];
+        const nextValue = romanNumberMap[romanNumber[i + 1]];
+
+        if (nextValue > currentValue) {
+            result += nextValue - currentValue;
+            i++;
+        } else {
+            result += currentValue;
+        }
+    }
+    return result;
+}
+
+const inputNum= "IX";
+const result6= romanToInteger(inputNum)
+console.log(result6)
 
 
-  
